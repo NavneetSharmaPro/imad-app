@@ -11,6 +11,83 @@ app.get('/', function (req, res) {
 //For above code: When a get request is made to '/' function should execute
 //sendFile method-> sends ui/index.html
 
+//Adding HTML files to js
+var articles={
+        articleOne : {
+            title:'Article One | Navneet Sharma',
+            heading: 'Article One',
+            date:'Mar 11th, 2018',
+            content: `
+                <p>
+                    This is my first article. This is my first article. This is my first article. This is my first article. This is my first article. This is my first article. This is my first article. This is my first article. This is my first article. This is my first article. This is my first article. This is my first article.
+                </p>
+                <p>
+                    This is my first article. This is my first article. This is my first article. This is my first article. This is my first article. This is my first article. This is my first article. This is my first article. This is my first article. This is my first article. This is my first article. This is my first article.
+                </p>
+                <p>
+                    This is my first article. This is my first article. This is my first article. This is my first article. This is my first article. This is my first article. This is my first article. This is my first article. This is my first article. This is my first article. This is my first article. This is my first article.
+                </p>`
+                },
+        articleTwo : {
+            title:'Article Two | Navneet Sharma',
+            heading: 'Article Two',
+            date:'Mar 11th, 2018',
+            content: `
+                <p>
+                    This is my Second article.
+                </p>
+            `
+        },
+        articleThree : {
+            title:'Article Three | Navneet Sharma',
+            heading: 'Article Three',
+            date:'Mar 11th, 2018',
+            content: `
+                <p>
+                    This is my Third article. 
+                </p>
+            `
+        }
+};
+
+function createTemplate(data){ 
+    
+    var title=data.title;
+    var heading=data.heading;
+    var date=data.date;
+    var content=data.content;
+    
+    var htmlTemplate=`
+        <html>
+        <head>
+            <title>
+                ${title}
+            </title>
+            <meta name="viewport" context="width=device-width,initial-scale=1"/>
+            <link href="/ui/style.css" rel="stylesheet" />
+        </head>
+        <body>
+            <div class="container">
+                <div>
+                    <a href="/">Home</a>
+                </div>
+                <hr/>
+                <h3>
+                    ${heading}
+                </h3>
+                <div>
+                    ${date}
+                </div>
+                <div>
+                    ${content}
+                </div>
+            </div>
+        </body>
+    </html>
+    
+    `;
+    return htmlTemplate;
+}
 //Added new app.get() * 3
 
 app.get('/article-one',function(req,res){
