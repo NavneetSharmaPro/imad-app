@@ -13,7 +13,7 @@ app.get('/', function (req, res) {
 
 //Adding HTML files to js
 var articles={
-        articleOne : {
+        'article-one' : {
             title:'Article One | Navneet Sharma',
             heading: 'Article One',
             date:'Mar 11th, 2018',
@@ -28,7 +28,7 @@ var articles={
                     This is my first article. This is my first article. This is my first article. This is my first article. This is my first article. This is my first article. This is my first article. This is my first article. This is my first article. This is my first article. This is my first article. This is my first article.
                 </p>`
                 },
-        articleTwo : {
+        'article-two' : {
             title:'Article Two | Navneet Sharma',
             heading: 'Article Two',
             date:'Mar 11th, 2018',
@@ -38,7 +38,7 @@ var articles={
                 </p>
             `
         },
-        articleThree : {
+        'article-three' : {
             title:'Article Three | Navneet Sharma',
             heading: 'Article Three',
             date:'Mar 11th, 2018',
