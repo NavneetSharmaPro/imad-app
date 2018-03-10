@@ -1,5 +1,5 @@
-var express = require('express');
-var morgan = require('morgan');
+var express = require('express'); //Library to create webservers
+var morgan = require('morgan'); //Library Used to output logs
 var path = require('path');
 
 var app = express();
@@ -8,6 +8,8 @@ app.use(morgan('combined'));
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
+//For above code: When a get request is made to '/' function should execute
+//sendFile method-> sends ui/index.html
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
