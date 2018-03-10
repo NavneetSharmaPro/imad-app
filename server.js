@@ -94,7 +94,7 @@ app.get('/:articleName',function(req,res){
     //articleName==article-one
     //articles[articleName]=={} content onject for article
     var articleName=req.params.articleName;
-    res.send(createtemplate(article[articleName]));
+    res.send(createtemplate(articles[articleName]));
 });
 
 
