@@ -11,6 +11,20 @@ app.get('/', function (req, res) {
 //For above code: When a get request is made to '/' function should execute
 //sendFile method-> sends ui/index.html
 
+//Added new app.get() * 3
+
+app.get('/article-one',function(req,res){
+    res.send("Article one is requested and will be served here");
+});
+
+app.get('/article-two',function(req,res){
+    res.send("Article two is requested and will be served here");
+});
+
+app.get('/article-three',function(req,res){
+    res.send("Article three is requested and will be served here");
+});
+
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
