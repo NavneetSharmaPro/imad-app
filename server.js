@@ -95,6 +95,7 @@ app.get('/:articleName',function(req,res){
     //articles[articleName]=={} content onject for article
     var articleName=req.params.articleName;
     res.send(createTemplate(articles[articleName]));
+    //This t in createTemplate fucked me over. -_-
 });
 
 
