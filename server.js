@@ -95,7 +95,7 @@ app.get('/counter', function(req, res) {
    counter = counter + 1;
    res.send(counter.toString());
 });
-
+//The HELL, this code works when it is above the /:articleName one -_-
 
 app.get('/:articleName',function(req,res){
     //articleName==article-one
